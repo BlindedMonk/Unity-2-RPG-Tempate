@@ -55,7 +55,7 @@ public class DialogUIManager : MonoBehaviour
     public void NextBranch(int branchSelect)
     {
         // Add ReactiveDialogueBranch with newBranch being next branch
-        RecieveDialogueBranch(branch.ResponseOption[branchSelect].nextBranch)
+        RecieveDialogueBranch(branch.ResponseOption[branchSelect].nextBranch);
         ActiveDialogue();
         NextDialogue();
     }
@@ -76,7 +76,7 @@ public class DialogUIManager : MonoBehaviour
         if(currentIndex >= branch.DialogueLines.Count) 
         {
             //No Response   -> End Dialogue
-            if(response == 0)
+            if(responses == 0)
             {
                 DeactiveDialogue();
             }
@@ -91,10 +91,18 @@ public class DialogUIManager : MonoBehaviour
                     }
                     //Activate the button and place response text 
                     responsesHolder[i].gameObject.SetActive(true);
-                    responsesHolder[i].GetComponentInChildren<TextMeshProUGUI = branch.ResponseOption[i].text;
+                    responsesHolder[i].GetComponentInChildren<TextMeshProUGUI>().text = branch.ResponseOption[i].text;
                 }
             }   
         }    
-
+        //There is still more text to show
+        else
+        {
+            mainText.GetComponent<TextMeshProUGUI>().text = branch.DialogueLines[currentIndex];
+            continueText.SetActive(true);
+            currentIndex++;
+        }
     }
+ 
+
 }

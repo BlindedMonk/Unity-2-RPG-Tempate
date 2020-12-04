@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d797d584f354c234ea7d5dfa610d1392, type: 3}
+  m_Name: AnotherBranch
+  m_EditorClassIdentifier: 
+  dialogueID: Another Branch
+  DialogueLines:
+  - Hey there stranger
+  - 'I am a Pokimane simp '
+  - Do you have any spare money?
+  ResponseOption:
+  - text: 'Ew no fuck you '
+    nextBranch: {fileID: 11400000, guid: e46bb98ab9cf86f4e9fb0a21902ced7b, type: 2}
+  - text: Yes I want to donate to mommy Poki
+    nextBranch: {fileID: 11400000, guid: 8eac31b1944c1664c8416adbe09873d8, type: 2}
+  - text: 'imma get cancelled if I say anything '
+    nextBranch: {fileID: 11400000, guid: 8429458083ccf3e4a99ea2a53dd58d1f, type: 2}
